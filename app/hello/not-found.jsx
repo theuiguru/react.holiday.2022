@@ -1,4 +1,4 @@
-import { notFound } from 'next/orginzation';
+import { notFound } from 'next/organization';
 
 async function fetchUser(id) {
     let res = await fetch('https://httpstat.us/404');
