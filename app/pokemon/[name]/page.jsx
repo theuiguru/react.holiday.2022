@@ -15,19 +15,15 @@ export default async function Home({ params, searchParams }) {
         <ul>
           {pokemonList.results.map((pokemon) => (
             <li key={pokemon.name}>
-              <Link
-                href={getPokemonUrl(pokemon.name, searchParams)}
-              >
+              <Link href={getPokemonUrl(pokemon.name, searchParams)}>
                 {pokemon.name}
               </Link>
             </li>
           ))}
         </ul>
-        <Link
-          href={getPokemonUrl(pokemon.name, {
+        <Link href={getPokemonUrl(pokemon.name, {
             limit: Number(searchParams.limit || 20) + 20,
-          })}
-        >
+          })} >
           Load more
         </Link>
       </aside>

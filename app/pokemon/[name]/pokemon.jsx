@@ -3,7 +3,6 @@ export async function fetchPokemon({ id = "", params = {} }) {
     let endpoint = new URL(
         `https://pokeapi.co/api/v2/pokemon/${id}?${searchParams}`
     ).toString();
-
     let res = await fetch(endpoint);
     return await res.json();
 }
@@ -16,6 +15,5 @@ export function getPokemonUrl(pokemonName = "bulbasaur", params = {}) {
         ["limit", params.limit],
         ]).toString();
     }
-
     return `${path}?${listSearchParams}`;
 }
